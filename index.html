@@ -748,8 +748,17 @@ if(navClose) navClose.addEventListener('click',closeNav);
 if(navOverlay) navOverlay.addEventListener('click',closeNav);
 
 // ═══ Google Sheets 상담 접수 ═══
-// ★ 아래 URL을 Google Apps Script 웹앱 URL로 교체하세요 ★
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxSikrY6renUCYSYNL8HEgUylM8Rh9RA7ANKXN9FbMwVzbz5jQ8fjKIKgIll62lSTxleg/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbySzIfObSJ4AEvzh5QVdt47rFAptH8ASlB-MJbDnGLPHwyz0txo_NFTqpZUU9lGWgPupQ/exec';
+
+// ═══ UTM 파라미터 수집 ═══
+const urlParams = new URLSearchParams(window.location.search);
+const UTM = {
+  source:   urlParams.get('utm_source')   || '',
+  medium:   urlParams.get('utm_medium')   || '',
+  campaign: urlParams.get('utm_campaign') || '',
+  content:  urlParams.get('utm_content')  || '',
+  term:     urlParams.get('utm_term')     || ''
+};
 
 function submitForm(prefix){
   const nameEl = document.getElementById(prefix+'-name');
@@ -787,7 +796,12 @@ function submitForm(prefix){
     phone: phone,
     buildingType: buildingType,
     contractStage: contractStage,
-    detail: detail
+    detail: detail,
+    utm_source: UTM.source,
+    utm_medium: UTM.medium,
+    utm_campaign: UTM.campaign,
+    utm_content: UTM.content,
+    utm_term: UTM.term
   };
 
   fetch(GOOGLE_SHEET_URL, {
