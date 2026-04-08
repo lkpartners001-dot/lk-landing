@@ -636,8 +636,8 @@ footer{background:var(--ch);padding:40px 0}
   <div class="ctwrap">
     <div class="ctcopy">
       <div><span class="stag">상담 안내</span></div>
-      <h2>지금 바로<br>법률 상담을 신청하세요</h2>
-      <p>계약 해지 가능성, 납입금 반환 범위, 대응 절차를<br>담당 변호사가 구체적으로 검토합니다.</p>
+      <h2>지금 바로 <br>법률 상담을 신청하세요</h2>
+      <p>계약 해지 가능성, 납입금 반환 범위, 대응 절차를 <br>담당 변호사가 구체적으로 검토합니다.</p>
       <div class="crow"><span class="cbadge">전화 상담</span><span class="cval"><a href="tel:010-2690-8622">010-2690-8622</a> &nbsp;·&nbsp; 24시간 접수</span></div>
       <div class="crow"><span class="cbadge">팩스</span><span class="cval">02-565-9887</span></div>
       <div class="crow"><span class="cbadge">이메일</span><span class="cval"><a href="mailto:info@lkpartner.co.kr">info@lkpartner.co.kr</a></span></div>
@@ -733,4 +733,17 @@ function openNav(){
   document.body.style.overflow='hidden';
 }
 function closeNav(){
-  navD
+  navDrawer.classList.remove('open');
+  navOverlay.classList.remove('open');
+  document.body.style.overflow='';
+}
+
+hamburgerBtn.addEventListener('click', openNav);
+navClose.addEventListener('click', closeNav);
+navOverlay.addEventListener('click', closeNav);
+document.querySelectorAll('.mobile-nav-links .nav-link, .mobile-nav-cta .nav-link').forEach(link=>{
+  link.addEventListener('click', closeNav);
+});
+</script>
+</body>
+</html>
