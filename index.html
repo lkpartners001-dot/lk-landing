@@ -466,7 +466,7 @@ footer{background:var(--ch);padding:40px 0}
       <h2>무료 법률 상담 신청</h2>
       <p class="csub">24시간 접수 · 담당 변호사가 직접 연락드립니다</p>
       <input type="text" class="ff" id="hero-name" placeholder="성함">
-      <input type="text" class="ff" id="hero-phone" placeholder="연락처 (숫자만)">
+      <input type="tel" class="ff" id="hero-phone" placeholder="연락처 (숫자만)" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
       <div class="sg"><div class="sl">건물 종류</div>
         <div class="chips">
           <span class="chip">아파트·지역주택조합</span><span class="chip">지식산업센터</span>
@@ -649,7 +649,7 @@ footer{background:var(--ch);padding:40px 0}
       <h3>온라인 상담 신청</h3>
       <p class="cs">24시간 접수 · 담당 변호사가 직접 연락드립니다</p>
       <input type="text" class="ff" id="cta-name" placeholder="성함">
-      <input type="text" class="ff" id="cta-phone" placeholder="연락처 (숫자만)">
+      <input type="tel" class="ff" id="cta-phone" placeholder="연락처 (숫자만)" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
       <div class="sg"><div class="sl">건물 종류</div>
         <div class="chips">
           <span class="chip">아파트·지역주택조합</span><span class="chip">지식산업센터</span>
