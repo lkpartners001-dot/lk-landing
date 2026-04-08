@@ -465,8 +465,8 @@ footer{background:var(--ch);padding:40px 0}
     <div class="hcard au d3">
       <h2>무료 법률 상담 신청</h2>
       <p class="csub">24시간 접수 · 담당 변호사가 직접 연락드립니다</p>
-      <input type="text" class="ff" placeholder="성함">
-      <input type="text" class="ff" placeholder="연락처 (숫자만)">
+      <input type="text" class="ff" id="hero-name" placeholder="성함">
+      <input type="text" class="ff" id="hero-phone" placeholder="연락처 (숫자만)">
       <div class="sg"><div class="sl">건물 종류</div>
         <div class="chips">
           <span class="chip">아파트·지역주택조합</span><span class="chip">지식산업센터</span>
@@ -480,8 +480,8 @@ footer{background:var(--ch);padding:40px 0}
           <span class="chip">중도금 납부 중</span><span class="chip">잔금 단계</span>
         </div>
       </div>
-      <textarea class="ff" placeholder="분양 단지명, 해지 사유를 간략히 적어주세요"></textarea>
-      <button class="bsub">상담 신청하기</button>
+      <textarea class="ff" id="hero-detail" placeholder="분양 단지명, 해지 사유를 간략히 적어주세요"></textarea>
+      <button class="bsub" onclick="submitForm('hero')">상담 신청하기</button>
       <p class="fnote">상담 내용은 변호사법에 따라 외부에 공개되지 않습니다</p>
     </div>
   </div>
@@ -640,7 +640,7 @@ footer{background:var(--ch);padding:40px 0}
       <p>계약 해지 가능성, 납입금 반환 범위, 대응 절차를 <br>담당 변호사가 구체적으로 검토합니다.</p>
       <div class="crow"><span class="cbadge">전화 상담</span><span class="cval"><a href="tel:010-2690-8622">010-2690-8622</a> &nbsp;·&nbsp; 24시간 접수</span></div>
       <div class="crow"><span class="cbadge">팩스</span><span class="cval">02-565-9887</span></div>
-      <div class="crow"><span class="cbadge">이메일</span><span class="cval"><a href="mailto:info@lkpartner.co.kr">info@lkpartner.co.kr</a></span></div>
+      <div class="crow"><span class="cbadge">이메일</span><span class="cval"><a href="/cdn-cgi/l/email-protection#b0d9ded6dff0dcdbc0d1c2c4ded5c29ed3df9edbc2"><span class="__cf_email__" data-cfemail="325b5c545d725e59425340465c57401c515d1c5940">[email&#160;protected]</span></a></span></div>
       <div class="crow"><span class="cbadge">카카오</span><span class="cval"><a href="http://pf.kakao.com/_xdPMkn/chat" target="_blank">카카오채널 바로가기</a> &nbsp;·&nbsp; 24시간 접수</span></div>
       <div class="crow"><span class="cbadge">방문 상담</span><span class="cval">평일 09:00–18:00 · 사전 예약 후 방문</span></div>
 
@@ -648,8 +648,8 @@ footer{background:var(--ch);padding:40px 0}
     <div class="ctform">
       <h3>온라인 상담 신청</h3>
       <p class="cs">24시간 접수 · 담당 변호사가 직접 연락드립니다</p>
-      <input type="text" class="ff" placeholder="성함">
-      <input type="text" class="ff" placeholder="연락처 (숫자만)">
+      <input type="text" class="ff" id="cta-name" placeholder="성함">
+      <input type="text" class="ff" id="cta-phone" placeholder="연락처 (숫자만)">
       <div class="sg"><div class="sl">건물 종류</div>
         <div class="chips">
           <span class="chip">아파트·지역주택조합</span><span class="chip">지식산업센터</span>
@@ -663,8 +663,8 @@ footer{background:var(--ch);padding:40px 0}
           <span class="chip">중도금 납부 중</span><span class="chip">잔금 단계</span>
         </div>
       </div>
-      <textarea class="ff" placeholder="분양 단지명, 계약 시기, 해지 사유를 간략히 적어주세요"></textarea>
-      <button class="bsub">상담 신청 제출하기</button>
+      <textarea class="ff" id="cta-detail" placeholder="분양 단지명, 계약 시기, 해지 사유를 간략히 적어주세요"></textarea>
+      <button class="bsub" onclick="submitForm('cta')">상담 신청 제출하기</button>
       <p class="fnote">상담 내용은 변호사법에 따른 비밀유지 의무에 따라 보호됩니다</p>
     </div>
   </div>
@@ -677,7 +677,7 @@ footer{background:var(--ch);padding:40px 0}
     <div>
       <div class="finfo">
         06152 서울특별시 강남구 테헤란로 305 한국기술센터 15층 &nbsp;|&nbsp; Tel. 010-2690-8622 &nbsp;|&nbsp; Fax. 02-565-9887<br>
-        Email. <a href="mailto:info@lkpartner.co.kr">info@lkpartner.co.kr</a> &nbsp;|&nbsp; 광고책임변호사: 정종대 &nbsp;|&nbsp; 영업시간: 24시간 접수
+        Email. <a href="/cdn-cgi/l/email-protection#751c1b131a35191e051407011b10075b161a5b1e07"><span class="__cf_email__" data-cfemail="fb92959d94bb97908b9a898f959e89d59894d59089">[email&#160;protected]</span></a> &nbsp;|&nbsp; 광고책임변호사: 정종대 &nbsp;|&nbsp; 영업시간: 24시간 접수
       </div>
       <div class="fdisc">본 웹사이트는 법률 정보 제공을 목적으로 하며, 특정 사건에 대한 법적 결론이나 성과를 보장하지 않습니다. 변호사 광고에 관한 규정 준수. © 2025 법무법인(유) 엘케이파트너스. All rights reserved.</div>
     </div>
@@ -685,7 +685,7 @@ footer{background:var(--ch);padding:40px 0}
       <a href="https://lkpartner.co.kr" target="_blank">공식 홈페이지</a>
       <a href="https://blog.naver.com/lk_partners" target="_blank">블로그</a>
       <a href="http://pf.kakao.com/_xdPMkn/chat" target="_blank">카카오 상담</a>
-      <a href="mailto:info@lkpartner.co.kr">이메일 문의</a>
+      <a href="/cdn-cgi/l/email-protection#ed84838b82ad81869d8c9f9983889fc38e82c3869f">이메일 문의</a>
 </div>
 </div>
 </div>
@@ -716,7 +716,7 @@ footer{background:var(--ch);padding:40px 0}
   </a>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.chip').forEach(c=>{
   c.addEventListener('click',()=>c.classList.toggle('on'));
 });
@@ -737,13 +737,72 @@ function closeNav(){
   navOverlay.classList.remove('open');
   document.body.style.overflow='';
 }
+if(hamburgerBtn) hamburgerBtn.addEventListener('click',openNav);
+if(navClose) navClose.addEventListener('click',closeNav);
+if(navOverlay) navOverlay.addEventListener('click',closeNav);
 
-hamburgerBtn.addEventListener('click', openNav);
-navClose.addEventListener('click', closeNav);
-navOverlay.addEventListener('click', closeNav);
-document.querySelectorAll('.mobile-nav-links .nav-link, .mobile-nav-cta .nav-link').forEach(link=>{
-  link.addEventListener('click', closeNav);
-});
+// ═══ Google Sheets 상담 접수 ═══
+// ★ 아래 URL을 Google Apps Script 웹앱 URL로 교체하세요 ★
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxSikrY6renUCYSYNL8HEgUylM8Rh9RA7ANKXN9FbMwVzbz5jQ8fjKIKgIll62lSTxleg/exec';
+
+function submitForm(prefix){
+  const nameEl = document.getElementById(prefix+'-name');
+  const phoneEl = document.getElementById(prefix+'-phone');
+  const detailEl = document.getElementById(prefix+'-detail');
+
+  const name = nameEl.value.trim();
+  const phone = phoneEl.value.trim();
+  const detail = detailEl.value.trim();
+
+  if(!name){alert('성함을 입력해주세요.');nameEl.focus();return;}
+  if(!phone){alert('연락처를 입력해주세요.');phoneEl.focus();return;}
+
+  // 선택된 칩 읽기 (해당 폼 컨테이너 내부에서)
+  const container = (prefix==='hero')
+    ? document.querySelector('.hcard')
+    : document.querySelector('.ctform');
+  const groups = container.querySelectorAll('.sg');
+  let buildingType = '';
+  let contractStage = '';
+  groups.forEach((g,i)=>{
+    const selected = Array.from(g.querySelectorAll('.chip.on')).map(c=>c.textContent).join(', ');
+    if(i===0) buildingType = selected;
+    if(i===1) contractStage = selected;
+  });
+
+  const btn = container.querySelector('.bsub');
+  const origText = btn.textContent;
+  btn.textContent = '전송 중…';
+  btn.disabled = true;
+
+  const payload = {
+    timestamp: new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'}),
+    name: name,
+    phone: phone,
+    buildingType: buildingType,
+    contractStage: contractStage,
+    detail: detail
+  };
+
+  fetch(GOOGLE_SHEET_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(payload)
+  })
+  .then(()=>{
+    alert('상담 신청이 접수되었습니다.\n담당 변호사가 빠르게 연락드리겠습니다.');
+    nameEl.value=''; phoneEl.value=''; detailEl.value='';
+    container.querySelectorAll('.chip.on').forEach(c=>c.classList.remove('on'));
+  })
+  .catch(()=>{
+    alert('전송 중 오류가 발생했습니다.\n전화(010-2690-8622) 또는 카카오로 문의 부탁드립니다.');
+  })
+  .finally(()=>{
+    btn.textContent = origText;
+    btn.disabled = false;
+  });
+}
 </script>
 </body>
 </html>
