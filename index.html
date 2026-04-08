@@ -748,7 +748,7 @@ if(navClose) navClose.addEventListener('click',closeNav);
 if(navOverlay) navOverlay.addEventListener('click',closeNav);
 
 // ═══ Google Sheets 상담 접수 ═══
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbySzIfObSJ4AEvzh5QVdt47rFAptH8ASlB-MJbDnGLPHwyz0txo_NFTqpZUU9lGWgPupQ/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRrX3I3hQDJJKc0fOuSim3xdjo8zzMABJJ7HTS4xCkbJiOCAr8tnPO60-OSzmChwkOuA/exec';
 
 // ═══ UTM 파라미터 수집 ═══
 const urlParams = new URLSearchParams(window.location.search);
@@ -777,13 +777,12 @@ function submitForm(prefix){
     ? document.querySelector('.hcard')
     : document.querySelector('.ctform');
   const groups = container.querySelectorAll('.sg');
-  let buildingType = '';
-  let contractStage = '';
-  groups.forEach((g,i)=>{
-    const selected = Array.from(g.querySelectorAll('.chip.on')).map(c=>c.textContent).join(', ');
-    if(i===0) buildingType = selected;
-    if(i===1) contractStage = selected;
+  let chips = [];
+  groups.forEach(g=>{
+    const selected = Array.from(g.querySelectorAll('.chip.on')).map(c=>c.textContent);
+    chips = chips.concat(selected);
   });
+  const caseType = chips.join(', ');
 
   const btn = container.querySelector('.bsub');
   const origText = btn.textContent;
@@ -794,14 +793,14 @@ function submitForm(prefix){
     timestamp: new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'}),
     name: name,
     phone: phone,
-    buildingType: buildingType,
-    contractStage: contractStage,
-    detail: detail,
+    caseType: caseType,
+    summary: detail,
     utm_source: UTM.source,
     utm_medium: UTM.medium,
     utm_campaign: UTM.campaign,
+    utm_term: UTM.term,
     utm_content: UTM.content,
-    utm_term: UTM.term
+    pageURL: window.location.href
   };
 
   fetch(GOOGLE_SHEET_URL, {
